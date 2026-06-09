@@ -1,0 +1,470 @@
+export interface DemoData {
+  slug: string;
+  businessName: string;
+  tagline: string;
+  industry: string;
+  accent: string;
+  accentRgb: string;
+  phone: string;
+  email: string;
+  address: string;
+  city: string;
+  state: string;
+  heroImage: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  stats: { value: string; label: string }[];
+  services: { title: string; desc: string; price?: string; icon: string; image: string }[];
+  about: { title: string; text: string; features: { icon: string; label: string }[] };
+  testimonials: { name: string; role: string; text: string; rating: number; image: string }[];
+  faq: { q: string; a: string }[];
+  ownerName: string;
+  ownerTitle: string;
+  ownerImage: string;
+  license?: string;
+  hours: string;
+}
+
+export const demos: DemoData[] = [
+  {
+    slug: "coach",
+    businessName: "Apex Athletic Training",
+    tagline: "Elite Personal Training — Austin, TX",
+    industry: "Coaching",
+    accent: "#e85d04",
+    accentRgb: "232,93,4",
+    phone: "(512) 555-0147",
+    email: "jake@apexathleticaustin.com",
+    address: "1803 E 6th Street",
+    city: "Austin",
+    state: "TX",
+    heroImage: "https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=1260",
+    heroTitle: "Stop Guessing. Start Training Smart.",
+    heroSubtitle: "Science-backed personal training that delivers real results. No fads, no shortcuts — just proven methods tailored to your body and your goals.",
+    stats: [
+      { value: "500+", label: "Clients Transformed" },
+      { value: "4.9★", label: "Google Rating" },
+      { value: "10+", label: "Years Experience" },
+      { value: "97%", label: "Client Retention" },
+    ],
+    services: [
+      { title: "1-on-1 Coaching", desc: "Custom training plans built around your schedule, goals, and body type. Every session is tracked and adjusted.", price: "$199/mo", icon: "dumbbell", image: "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Small Group Training", desc: "Train with 2-4 people at a lower cost. Same personalized programming, extra motivation from your crew.", price: "$129/mo", icon: "users", image: "https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Nutrition Coaching", desc: "Macro plans, meal prep strategies, and weekly check-ins. No crash diets — sustainable habits that stick.", price: "$149/mo", icon: "apple", image: "https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Online Programming", desc: "Can't make it to the gym? Get a fully custom program with video demos and weekly coach check-ins.", price: "$99/mo", icon: "laptop", image: "https://images.pexels.com/photos/4498362/pexels-photo-4498362.jpeg?auto=compress&cs=tinysrgb&w=600" },
+    ],
+    about: {
+      title: "Meet Coach Jake Morrison",
+      text: "CSCS certified, M.S. in Exercise Science from UT Austin, Precision Nutrition Level 2. Competitive powerlifter and 3x Texas State Champion. Jake started Apex Athletic after seeing too many people waste time on generic programs that don't work.",
+      features: [
+        { icon: "award", label: "CSCS Certified" },
+        { icon: "graduation", label: "M.S. Exercise Science" },
+        { icon: "trophy", label: "3x TX State Champion" },
+        { icon: "heart", label: "Precision Nutrition L2" },
+      ],
+    },
+    testimonials: [
+      { name: "David Martinez", role: "Software Engineer", text: "I came in with chronic back pain from sitting at a desk 10 hours a day. Jake didn't just fix my posture — he built strength I didn't know I had. Down 22 lbs and pain-free for the first time in years.", rating: 5, image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=200" },
+      { name: "Rachel Kim", role: "Restaurant Owner", text: "Running a restaurant means 70-hour weeks and constant stress. Jake's program fit my insane schedule and actually gave me MORE energy. I'm stronger at 42 than I was at 25.", rating: 5, image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200" },
+      { name: "Marcus Thompson", role: "New Dad", text: "Needed to get healthy for my daughter. Jake understood that and built a program around my 5am window. 6 months later I've lost 35 lbs and can keep up with my toddler.", rating: 5, image: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=200" },
+    ],
+    faq: [
+      { q: "I have a previous injury. Can I still train?", a: "Absolutely. We start with a movement assessment and build your program around what your body can do now, then progressively strengthen weak areas. Many clients come to us specifically because their previous trainer didn't account for injuries." },
+      { q: "Do I need to sign a long-term contract?", a: "No contracts. Month-to-month billing. We earn your loyalty through results, not paperwork. Most clients stay 12+ months because they want to, not because they have to." },
+      { q: "How soon will I see results?", a: "Most clients feel a noticeable difference in energy and strength within 2-3 weeks. Visible body composition changes typically show up around week 6-8 with consistent training and nutrition." },
+      { q: "Where are you located?", a: "1803 E 6th Street, East Austin. Free parking in the back. We also offer outdoor sessions at Zilker Park when the weather's nice." },
+    ],
+    ownerName: "Jake Morrison",
+    ownerTitle: "Head Coach & Founder",
+    ownerImage: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=400",
+    hours: "Mon-Fri 5AM-9PM, Sat 7AM-5PM",
+  },
+  {
+    slug: "dentist",
+    businessName: "Meridian Dental",
+    tagline: "Modern Dentistry — Chicago, IL",
+    industry: "Dental",
+    accent: "#2563eb",
+    accentRgb: "37,99,235",
+    phone: "(312) 555-0198",
+    email: "hello@meridiandentalchi.com",
+    address: "225 N Michigan Ave, Suite 1200",
+    city: "Chicago",
+    state: "IL",
+    heroImage: "https://images.pexels.com/photos/3845766/pexels-photo-3845766.jpeg?auto=compress&cs=tinysrgb&w=1260",
+    heroTitle: "Dental Care That Doesn't Feel Like a Chore",
+    heroSubtitle: "Gentle, modern dentistry in the heart of Chicago. We make visits easy — from routine cleanings to complete smile makeovers.",
+    stats: [
+      { value: "12,000+", label: "Patients Served" },
+      { value: "4.9★", label: "Google Rating" },
+      { value: "15+", label: "Years in Practice" },
+      { value: "98%", label: "Would Recommend" },
+    ],
+    services: [
+      { title: "Preventive Care", desc: "Cleanings, exams, digital X-rays, and fluoride treatments. Catch problems early before they become expensive.", price: "$79", icon: "shield", image: "https://images.pexels.com/photos/3845698/pexels-photo-3845698.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Teeth Whitening", desc: "Professional in-office whitening that's 6x stronger than strips. Results in one visit, lasts 6-12 months.", price: "$299", icon: "sparkles", image: "https://images.pexels.com/photos/3762453/pexels-photo-3762453.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Invisalign", desc: "Straighten your teeth without metal braces. Clear aligners customized for your smile. Average treatment: 12 months.", price: "$3,500+", icon: "alignLeft", image: "https://images.pexels.com/photos/6812540/pexels-photo-6812540.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Dental Implants", desc: "Permanent tooth replacement that looks and feels natural. Titanium posts placed by our in-house oral surgeon.", price: "$2,800+", icon: "wrench", image: "https://images.pexels.com/photos/3845547/pexels-photo-3845547.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Emergency Dental", desc: "Toothache? Broken tooth? We keep same-day slots open for emergencies. Call before 2pm, seen same day.", price: "$150+", icon: "zap", image: "https://images.pexels.com/photos/5214958/pexels-photo-5214958.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Pediatric Dentistry", desc: "Kid-friendly environment with TVs on the ceiling and prizes after every visit. We make dental visits fun.", price: "$69", icon: "baby", image: "https://images.pexels.com/photos/4427430/pexels-photo-4427430.jpeg?auto=compress&cs=tinysrgb&w=600" },
+    ],
+    about: {
+      title: "Why 12,000+ Patients Choose Meridian",
+      text: "Founded by Dr. Lisa Park, Meridian Dental combines cutting-edge technology with genuine patient care. Our team of 4 dentists and 12 hygienists provide comprehensive dental care under one roof.",
+      features: [
+        { icon: "monitor", label: "Digital X-Rays (90% less radiation)" },
+        { icon: "clock", label: "Evening & Weekend Hours" },
+        { icon: "creditCard", label: "0% Financing Available" },
+        { icon: "shield", label: "No-Judgment Dentistry" },
+      ],
+    },
+    testimonials: [
+      { name: "Jennifer Walsh", role: "Marketing Director", text: "I avoided the dentist for 6 years out of fear. Dr. Park changed everything. She was patient, gentle, and never made me feel ashamed. Now I actually look forward to my cleanings.", rating: 5, image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200" },
+      { name: "Robert Chen", role: "Software Engineer", text: "Got my Invisalign done here and the results are incredible. The team was transparent about costs from day one — no surprise bills. My smile is straight for the first time in my life.", rating: 5, image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=200" },
+      { name: "Amanda Torres", role: "Teacher", text: "My kids used to scream at the dentist. Now they ask when they get to go back. The ceiling TVs and prize box are genius. Dr. Martinez is a miracle worker with children.", rating: 5, image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200" },
+    ],
+    faq: [
+      { q: "Do you accept insurance?", a: "We're in-network with most major plans including Delta Dental, Cigna, MetLife, and Aetna. We also offer 0% financing through CareCredit for treatments not covered by insurance." },
+      { q: "What if I'm terrified of the dentist?", a: "You're not alone — about 30% of our patients felt the same way before their first visit. We offer sedation options, noise-canceling headphones, and a no-pressure approach. We go at YOUR pace." },
+      { q: "How much does a cleaning cost without insurance?", a: "New patient special: $79 for cleaning, exam, and X-rays. Regular cleanings are $120 after that. We'll always give you a cost estimate before any treatment." },
+    ],
+    ownerName: "Dr. Lisa Park, DDS",
+    ownerTitle: "Lead Dentist & Founder",
+    ownerImage: "https://images.pexels.com/photos/5214958/pexels-photo-5214958.jpeg?auto=compress&cs=tinysrgb&w=400",
+    hours: "Mon-Fri 8AM-7PM, Sat 9AM-3PM",
+  },
+  {
+    slug: "lawyer",
+    businessName: "Justice Legal Group",
+    tagline: "Aggressive Representation — New York, NY",
+    industry: "Legal",
+    accent: "#c9a84c",
+    accentRgb: "201,168,76",
+    phone: "(555) 300-0300",
+    email: "info@justicelegalgroup.com",
+    address: "123 Main Street, Suite 500",
+    city: "New York",
+    state: "NY",
+    heroImage: "https://images.pexels.com/photos/8927462/pexels-photo-8927462.jpeg?auto=compress&cs=tinysrgb&w=1260",
+    heroTitle: "Fighting for Your Justice Every Step of the Way",
+    heroSubtitle: "At Justice Legal Group, we provide aggressive and compassionate legal representation. Our experienced attorneys are dedicated to protecting your rights and securing the compensation you deserve.",
+    stats: [
+      { value: "25+", label: "Years Experience" },
+      { value: "5,000+", label: "Cases Won" },
+      { value: "98%", label: "Client Satisfaction" },
+      { value: "$50M+", label: "Recovered for Clients" },
+    ],
+    services: [
+      { title: "Personal Injury", desc: "Car accidents, slip & falls, workplace injuries. We fight insurance companies so you can focus on healing. No fee unless we win.", icon: "shield", image: "https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Criminal Defense", desc: "From misdemeanors to federal charges. Former prosecutors on our team who know exactly how the other side thinks.", icon: "gavel", image: "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Family Law", desc: "Divorce, custody, child support. We protect what matters most — your family. Compassionate counsel during difficult times.", icon: "heart", image: "https://images.pexels.com/photos/5668492/pexels-photo-5668492.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Business Law", desc: "Contracts, disputes, formation, compliance. We help businesses of all sizes navigate legal challenges and grow.", icon: "briefcase", image: "https://images.pexels.com/photos/4427611/pexels-photo-4427611.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Estate Planning", desc: "Wills, trusts, powers of attorney, probate. Protect your legacy and your family's future with proper planning.", icon: "fileText", image: "https://images.pexels.com/photos/4427426/pexels-photo-4427426.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Immigration Law", desc: "Visas, green cards, citizenship, deportation defense. We help families stay together and build their American dream.", icon: "globe", image: "https://images.pexels.com/photos/4427430/pexels-photo-4427430.jpeg?auto=compress&cs=tinysrgb&w=600" },
+    ],
+    about: {
+      title: "Dedicated to Protecting Your Rights",
+      text: "Led by James Washington, Esq., Justice Legal Group has been fighting for clients for over 25 years. Our team of 8 attorneys brings decades of combined experience across all areas of law.",
+      features: [
+        { icon: "award", label: "Super Lawyers Selection" },
+        { icon: "scale", label: "Former Prosecutors on Staff" },
+        { icon: "clock", label: "24/7 Emergency Line" },
+        { icon: "dollarSign", label: "Free Consultations" },
+      ],
+    },
+    testimonials: [
+      { name: "Michael Johnson", role: "Construction Worker", text: "After my accident, the insurance company offered me $5,000. James got me $180,000. He fought for me when I couldn't fight for myself. I owe this man everything.", rating: 5, image: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=200" },
+      { name: "Sarah Williams", role: "Business Owner", text: "James handled our contract dispute with precision and professionalism. Saved our company $200K and preserved a key business relationship. Worth every penny.", rating: 5, image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200" },
+      { name: "David Rodriguez", role: "Father of 3", text: "During my custody battle, James was my rock. He understood what was at stake and fought like it was his own family. I got primary custody and my kids are thriving.", rating: 5, image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=200" },
+    ],
+    faq: [
+      { q: "How much does a consultation cost?", a: "Your first consultation is completely free. We'll review your case, explain your options, and give you an honest assessment — no obligation, no pressure." },
+      { q: "Do you work on contingency?", a: "For personal injury cases, yes — you pay nothing unless we win. For other practice areas, we offer competitive hourly rates and flat-fee options." },
+      { q: "How long will my case take?", a: "It depends on the complexity. Simple cases may resolve in 2-3 months. Complex litigation can take 12-18 months. We'll give you a realistic timeline during your consultation." },
+    ],
+    ownerName: "James Washington, Esq.",
+    ownerTitle: "Managing Partner",
+    ownerImage: "https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=400",
+    license: "NY Bar #2001-45897",
+    hours: "Mon-Fri 8AM-6PM, Sat 9AM-2PM",
+  },
+  {
+    slug: "electrician",
+    businessName: "Bright Wire Electric",
+    tagline: "Licensed & Insured — Miami, FL",
+    industry: "Electrician",
+    accent: "#f59e0b",
+    accentRgb: "245,158,11",
+    phone: "(305) 555-0103",
+    email: "service@brightwireelectric.com",
+    address: "4720 NW 7th Ave",
+    city: "Miami",
+    state: "FL",
+    heroImage: "https://images.pexels.com/photos/8961101/pexels-photo-8961101.jpeg?auto=compress&cs=tinysrgb&w=1260",
+    heroTitle: "Your Home Deserves a Licensed Electrician",
+    heroSubtitle: "Family-owned electrical contractor serving Miami-Dade for 15+ years. Licensed, insured, and background-checked electricians you can trust in your home.",
+    stats: [
+      { value: "15+", label: "Years Serving Miami" },
+      { value: "8,500+", label: "Jobs Completed" },
+      { value: "4.9★", label: "Google Rating" },
+      { value: "30min", label: "Emergency Response" },
+    ],
+    services: [
+      { title: "Panel Upgrades", desc: "Upgrade from 100A to 200A+ to handle modern electrical demands. Required for EV chargers, hot tubs, and home additions.", price: "$1,800+", icon: "zap", image: "https://images.pexels.com/photos/8961101/pexels-photo-8961101.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "EV Charger Install", desc: "Tesla Wall Connector, ChargePoint, JuiceBox — we install all brands. Permit pulled, inspection passed, ready to charge.", price: "$800+", icon: "battery", image: "https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Whole-Home Rewiring", desc: "Older home with aluminum or knob-and-tube wiring? We'll bring everything up to code safely and efficiently.", price: "$4,500+", icon: "repeat", image: "https://images.pexels.com/photos/4491881/pexels-photo-4491881.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Lighting Design", desc: "Recessed lighting, under-cabinet LEDs, landscape lighting, smart switches. We make your home look incredible.", price: "$250+", icon: "lightbulb", image: "https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Generator Installation", desc: "Standby generators that kick in automatically during outages. Keep your AC, fridge, and lights running through hurricane season.", price: "$3,200+", icon: "power", image: "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "24/7 Emergency", desc: "Power out? Burning smell? Sparking outlet? We're on call 24/7. Average response time: 30 minutes in Miami-Dade.", price: "$150+", icon: "alertTriangle", image: "https://images.pexels.com/photos/5691632/pexels-photo-5691632.jpeg?auto=compress&cs=tinysrgb&w=600" },
+    ],
+    about: {
+      title: "Why Miami Trusts Bright Wire",
+      text: "Founded by Marcus Rivera, a 3rd-generation electrician, Bright Wire Electric has been keeping Miami-Dade homes safe since 2009. Every electrician on our team is licensed, insured, and background-checked.",
+      features: [
+        { icon: "shield", label: "Licensed & Insured (FL License #EC-132847)" },
+        { icon: "award", label: "BBB A+ Rated" },
+        { icon: "clock", label: "Same-Day Service Available" },
+        { icon: "checkCircle", label: "2-Year Labor Warranty" },
+      ],
+    },
+    testimonials: [
+      { name: "Patricia Hernandez", role: "Homeowner, Coral Gables", text: "Marcus and his team rewired our 1960s home in 3 days. Clean work, on budget, and they even fixed a code violation the previous electrician missed. Can't recommend them enough.", rating: 5, image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200" },
+      { name: "James Liu", role: "Restaurant Owner", text: "Our kitchen kept tripping breakers during dinner rush. Bright Wire upgraded our panel and added dedicated circuits — hasn't tripped once since. They saved our business.", rating: 5, image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=200" },
+      { name: "Sandra Williams", role: "Property Manager", text: "I manage 12 rental properties and Bright Wire handles all my electrical work. Fast, reliable, fair pricing. They're the only electrician I call.", rating: 5, image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200" },
+    ],
+    faq: [
+      { q: "Are you licensed and insured?", a: "Yes. Florida License #EC-132847. We carry $2M in general liability insurance and workers' comp on every employee. Happy to provide certificates before we start work." },
+      { q: "Do you offer free estimates?", a: "Yes! We provide free on-site estimates for all projects under $5,000. For larger projects, we charge a small diagnostic fee that's credited toward the job." },
+      { q: "How quickly can you come out?", a: "For non-emergency work, we typically schedule within 2-3 business days. For emergencies (power out, sparking wires, burning smell), we respond within 30 minutes, 24/7." },
+    ],
+    ownerName: "Marcus Rivera",
+    ownerTitle: "Owner & Master Electrician",
+    ownerImage: "https://images.pexels.com/photos/8961101/pexels-photo-8961101.jpeg?auto=compress&cs=tinysrgb&w=400",
+    license: "FL License #EC-132847",
+    hours: "Mon-Fri 7AM-6PM, Sat 8AM-2PM, 24/7 Emergency",
+  },
+  {
+    slug: "plumber",
+    businessName: "Canyon Plumbing",
+    tagline: "Family-Owned Since 2009 — Austin, TX",
+    industry: "Plumbing",
+    accent: "#0ea5e9",
+    accentRgb: "14,165,233",
+    phone: "(512) 555-0147",
+    email: "hello@canyonplumbing.com",
+    address: "7812 Burnet Rd",
+    city: "Austin",
+    state: "TX",
+    heroImage: "https://images.pexels.com/photos/5691602/pexels-photo-5691602.jpeg?auto=compress&cs=tinysrgb&w=1260",
+    heroTitle: "Austin's Most Trusted Plumbing Crew Since 2009",
+    heroSubtitle: "The crew your neighbors recommend. Same-day service, flat-rate pricing, and a 2-year labor warranty on every job.",
+    stats: [
+      { value: "4,200+", label: "Jobs Completed" },
+      { value: "16", label: "Years in Business" },
+      { value: "30min", label: "Average Response" },
+      { value: "4.9★", label: "Google Rating" },
+    ],
+    services: [
+      { title: "Drain Cleaning", desc: "Clogged sink, shower, or main line? We use professional-grade snakes and hydro-jetting to clear any blockage fast.", price: "$125+", icon: "droplets", image: "https://images.pexels.com/photos/6195227/pexels-photo-6195227.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Leak Detection", desc: "Hidden leaks cause thousands in damage. We use acoustic sensors and thermal imaging to find leaks without tearing up your walls.", price: "$149+", icon: "search", image: "https://images.pexels.com/photos/5591576/pexels-photo-5591576.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Pipe Repair", desc: "Burst pipes, corroded lines, frozen pipes — we repair and replace all types including copper, PEX, and PVC.", price: "$175+", icon: "wrench", image: "https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Water Heater", desc: "Tank and tankless installation, repair, and maintenance. We're certified installers for Rinnai, Navien, and Rheem.", price: "$189+", icon: "flame", image: "https://images.pexels.com/photos/1457845/pexels-photo-1457845.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Sewer Line Service", desc: "Camera inspections, trenchless repair, and full replacements. We fix sewer problems with minimal disruption to your yard.", price: "$299+", icon: "construction", image: "https://images.pexels.com/photos/6444956/pexels-photo-6444956.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Fixture Installation", desc: "Faucets, toilets, garbage disposals, showerheads — we install all brands. Bring your own or let us supply top-quality fixtures.", icon: "droplet", image: "https://images.pexels.com/photos/3626601/pexels-photo-3626601.jpeg?auto=compress&cs=tinysrgb&w=600" },
+    ],
+    about: {
+      title: "The Canyon Plumbing Story",
+      text: "Mike Hernandez started Canyon Plumbing in 2009 with a used van and a toolbox. Today, wife Sara runs the office and son Jake joined the crew in 2022. Over 80% of our business comes from repeat customers and referrals.",
+      features: [
+        { icon: "shield", label: "Licensed & Background-Checked" },
+        { icon: "clock", label: "Same-Day Service" },
+        { icon: "dollarSign", label: "Flat-Rate Pricing (No Surprises)" },
+        { icon: "checkCircle", label: "2-Year Labor Warranty" },
+      ],
+    },
+    testimonials: [
+      { name: "Robert Chen", role: "Homeowner, North Austin", text: "Mike showed up within an hour of my call. Fixed our slab leak the same day and even helped us file the insurance claim. This is the kind of service you tell your neighbors about.", rating: 5, image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=200" },
+      { name: "Amanda Torres", role: "Homeowner, South Austin", text: "We've used Canyon for everything from a dripping faucet to a full sewer line replacement. Sara always gets us scheduled fast and Mike's pricing is always fair. 10+ years as customers.", rating: 5, image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200" },
+      { name: "Marcus Webb", role: "Homeowner, Cedar Park", text: "Had a tankless water heater installed. Jake was professional, clean, and explained everything. They even hauled away the old tank. Best plumbing experience I've ever had.", rating: 5, image: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=200" },
+    ],
+    faq: [
+      { q: "How much does a service call cost?", a: "We charge a $49 diagnostic fee that's waived if you approve the repair. All prices are flat-rate — quoted before we start, no hourly surprises." },
+      { q: "Do you offer emergency service?", a: "Yes! We're available 24/7 for emergencies like burst pipes, sewage backups, and gas leaks. Call our main line and follow the prompts for after-hours dispatch." },
+      { q: "What areas do you serve?", a: "All of Austin metro including Round Rock, Cedar Park, Pflugerville, Georgetown, Kyle, and Buda. If you're not sure, just call and ask!" },
+    ],
+    ownerName: "Mike Hernandez",
+    ownerTitle: "Owner & Master Plumber",
+    ownerImage: "https://images.pexels.com/photos/5691602/pexels-photo-5691602.jpeg?auto=compress&cs=tinysrgb&w=400",
+    license: "TX Master Plumber #M-41827",
+    hours: "Mon-Fri 7AM-6PM, Sat 8AM-1PM, 24/7 Emergency",
+  },
+  {
+    slug: "sarah-coach",
+    businessName: "FitPro Coaching",
+    tagline: "Elite Personal Training — Austin, TX",
+    industry: "Coaching",
+    accent: "#e85d04",
+    accentRgb: "232,93,4",
+    phone: "(512) 555-0101",
+    email: "sarah@fitprocoaching.com",
+    address: "3200 S Lamar Blvd",
+    city: "Austin",
+    state: "TX",
+    heroImage: "https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=1260",
+    heroTitle: "Transform Your Body. Transform Your Life.",
+    heroSubtitle: "Certified personal trainer specializing in strength training, weight loss, and athletic performance. Results-driven programs tailored to YOUR goals.",
+    stats: [
+      { value: "500+", label: "Clients Trained" },
+      { value: "4.9★", label: "Google Rating" },
+      { value: "10+", label: "Years Experience" },
+      { value: "97%", label: "Client Retention" },
+    ],
+    services: [
+      { title: "1-on-1 Training", desc: "Personalized programs designed for your body, your goals, your schedule. Every rep counted, every set tracked.", price: "$199/mo", icon: "dumbbell", image: "https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Group Classes", desc: "High-energy group sessions (max 8 people). Same expert coaching, extra motivation from your training partners.", price: "$99/mo", icon: "users", image: "https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Online Coaching", desc: "Train from anywhere with custom video programming and weekly check-ins. Perfect for busy schedules.", price: "$129/mo", icon: "laptop", image: "https://images.pexels.com/photos/4498362/pexels-photo-4498362.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Nutrition Plans", desc: "Macro-based nutrition coaching with meal prep guides and grocery lists. No fad diets — just real food.", price: "$149/mo", icon: "apple", image: "https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=600" },
+    ],
+    about: {
+      title: "Meet Coach Sarah",
+      text: "NASM Certified Personal Trainer, Precision Nutrition Level 2, former D1 athlete at UT Austin. Sarah has helped over 500 clients transform their bodies and their relationship with fitness.",
+      features: [
+        { icon: "award", label: "NASM Certified" },
+        { icon: "graduation", label: "D1 Athlete — UT Austin" },
+        { icon: "trophy", label: "Precision Nutrition L2" },
+        { icon: "heart", label: "500+ Transformations" },
+      ],
+    },
+    testimonials: [
+      { name: "Emily Rodriguez", role: "Marketing Manager", text: "Sarah changed my life. I went from hating the gym to training 4x a week. Lost 30 lbs and gained confidence I never had. She's not just a trainer — she's a game changer.", rating: 5, image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200" },
+      { name: "Jason Park", role: "Startup Founder", text: "As a founder, I thought I didn't have time to train. Sarah proved me wrong. Her online program fits my chaotic schedule and I'm in the best shape of my life at 38.", rating: 5, image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=200" },
+      { name: "Maria Santos", role: "New Mom", text: "Sarah's postpartum program was exactly what I needed. She understood my body's limitations and helped me rebuild strength safely. I feel stronger than before pregnancy.", rating: 5, image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200" },
+    ],
+    faq: [
+      { q: "I'm a complete beginner. Is that okay?", a: "Absolutely! Most of my clients started as beginners. I'll teach you proper form from day one and build your confidence step by step." },
+      { q: "How many sessions per week do you recommend?", a: "For most goals, 3-4 sessions per week is the sweet spot. I'll help you find the right frequency based on your schedule and recovery capacity." },
+      { q: "Do I need to follow a specific diet?", a: "I don't believe in restrictive diets. I'll teach you how to eat for your goals using flexible nutrition principles. No foods are off-limits." },
+    ],
+    ownerName: "Sarah Mitchell",
+    ownerTitle: "Head Coach & Founder",
+    ownerImage: "https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=400",
+    hours: "Mon-Fri 5AM-8PM, Sat 7AM-3PM",
+  },
+  {
+    slug: "marcus-electrician",
+    businessName: "Spark Electric",
+    tagline: "Trusted Since 2010 — Miami, FL",
+    industry: "Electrician",
+    accent: "#f59e0b",
+    accentRgb: "245,158,11",
+    phone: "(305) 555-0103",
+    email: "marcus@sparkelectricmiami.com",
+    address: "4720 NW 7th Ave",
+    city: "Miami",
+    state: "FL",
+    heroImage: "https://images.pexels.com/photos/8961101/pexels-photo-8961101.jpeg?auto=compress&cs=tinysrgb&w=1260",
+    heroTitle: "Safe, Reliable Electrical Service for Your Home",
+    heroSubtitle: "Licensed electrician serving Miami-Dade for 15+ years. From simple outlet repairs to complete home rewiring — we do it all, safely and on budget.",
+    stats: [
+      { value: "15+", label: "Years Experience" },
+      { value: "4.9★", label: "Google Rating" },
+      { value: "8,500+", label: "Jobs Completed" },
+      { value: "30min", label: "Emergency Response" },
+    ],
+    services: [
+      { title: "Panel Upgrades", desc: "Modern panels for modern homes. Upgrade to 200A+ for EV chargers, additions, and peace of mind.", price: "$1,800+", icon: "zap", image: "https://images.pexels.com/photos/8961101/pexels-photo-8961101.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "EV Charger Install", desc: "All brands. Permit included. Charge your EV at home overnight.", price: "$800+", icon: "battery", image: "https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Home Rewiring", desc: "Aluminum or knob-and-tube? We bring everything up to code safely.", price: "$4,500+", icon: "repeat", image: "https://images.pexels.com/photos/4491881/pexels-photo-4491881.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Lighting", desc: "Recessed, under-cabinet, landscape, smart switches. Transform your space.", price: "$250+", icon: "lightbulb", image: "https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Generators", desc: "Standby generators for hurricane season. Automatic transfer switches included.", price: "$3,200+", icon: "power", image: "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "24/7 Emergency", desc: "Power out? Burning smell? We respond in 30 minutes, day or night.", price: "$150+", icon: "alertTriangle", image: "https://images.pexels.com/photos/5691632/pexels-photo-5691632.jpeg?auto=compress&cs=tinysrgb&w=600" },
+    ],
+    about: {
+      title: "Meet Marcus Rivera",
+      text: "3rd-generation electrician and founder of Spark Electric. Licensed since 2010, Marcus has completed over 8,500 jobs across Miami-Dade. Every electrician on his team is licensed, insured, and background-checked.",
+      features: [
+        { icon: "shield", label: "FL License #EC-132847" },
+        { icon: "award", label: "BBB A+ Rated" },
+        { icon: "clock", label: "Same-Day Service" },
+        { icon: "checkCircle", label: "2-Year Warranty" },
+      ],
+    },
+    testimonials: [
+      { name: "Patricia Hernandez", role: "Homeowner", text: "Marcus rewired our 1960s home in 3 days. Clean work, on budget. He even fixed a code violation the previous electrician missed. Can't recommend enough.", rating: 5, image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200" },
+      { name: "James Liu", role: "Restaurant Owner", text: "Our kitchen kept tripping breakers. Marcus upgraded our panel and added dedicated circuits. Hasn't tripped once since. He saved our business.", rating: 5, image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=200" },
+      { name: "Sandra Williams", role: "Property Manager", text: "I manage 12 properties and Marcus handles all my electrical. Fast, reliable, fair pricing. He's the only electrician I call.", rating: 5, image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200" },
+    ],
+    faq: [
+      { q: "Are you licensed?", a: "Yes — FL License #EC-132847. We carry $2M liability insurance and workers' comp on every employee." },
+      { q: "Free estimates?", a: "Yes! Free on-site estimates for projects under $5,000. Larger projects have a small diagnostic fee credited toward the job." },
+      { q: "How fast can you come?", a: "Non-emergency: 2-3 business days. Emergency: 30 minutes, 24/7." },
+    ],
+    ownerName: "Marcus Rivera",
+    ownerTitle: "Owner & Master Electrician",
+    ownerImage: "https://images.pexels.com/photos/8961101/pexels-photo-8961101.jpeg?auto=compress&cs=tinysrgb&w=400",
+    license: "FL License #EC-132847",
+    hours: "Mon-Fri 7AM-6PM, Sat 8AM-2PM, 24/7 Emergency",
+  },
+  {
+    slug: "lisa-dentist",
+    businessName: "Bright Smile Dental",
+    tagline: "Your Smile, Our Priority — Chicago, IL",
+    industry: "Dental",
+    accent: "#2563eb",
+    accentRgb: "37,99,235",
+    phone: "(312) 555-0198",
+    email: "hello@brightsmilechicago.com",
+    address: "225 N Michigan Ave, Suite 1200",
+    city: "Chicago",
+    state: "IL",
+    heroImage: "https://images.pexels.com/photos/3845766/pexels-photo-3845766.jpeg?auto=compress&cs=tinysrgb&w=1260",
+    heroTitle: "A Brighter Smile Starts Here",
+    heroSubtitle: "Gentle, modern dentistry in downtown Chicago. From routine cleanings to complete smile makeovers — we make dental visits easy.",
+    stats: [
+      { value: "12,000+", label: "Happy Patients" },
+      { value: "4.9★", label: "Google Rating" },
+      { value: "15+", label: "Years in Practice" },
+      { value: "98%", label: "Would Recommend" },
+    ],
+    services: [
+      { title: "Preventive Care", desc: "Cleanings, exams, digital X-rays. Catch problems early.", price: "$79", icon: "shield", image: "https://images.pexels.com/photos/3845766/pexels-photo-3845766.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Teeth Whitening", desc: "Professional whitening, 6x stronger than strips. One visit.", price: "$299", icon: "sparkles", image: "https://images.pexels.com/photos/3762453/pexels-photo-3762453.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Invisalign", desc: "Clear aligners. Average treatment: 12 months.", price: "$3,500+", icon: "alignLeft", image: "https://images.pexels.com/photos/4427430/pexels-photo-4427430.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Dental Implants", desc: "Permanent, natural-looking tooth replacement.", price: "$2,800+", icon: "wrench", image: "https://images.pexels.com/photos/3845547/pexels-photo-3845547.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Emergency Dental", desc: "Same-day appointments for toothaches and broken teeth.", price: "$150+", icon: "zap", image: "https://images.pexels.com/photos/5214958/pexels-photo-5214958.jpeg?auto=compress&cs=tinysrgb&w=600" },
+      { title: "Cosmetic Dentistry", desc: "Veneers, bonding, and smile design. Your dream smile.", price: "$800+", icon: "star", image: "https://images.pexels.com/photos/6812540/pexels-photo-6812540.jpeg?auto=compress&cs=tinysrgb&w=600" },
+    ],
+    about: {
+      title: "Why Chicago Chooses Bright Smile",
+      text: "Led by Dr. Lisa Park, our team of 4 dentists provides comprehensive care with cutting-edge technology and genuine compassion.",
+      features: [
+        { icon: "monitor", label: "Digital X-Rays (90% less radiation)" },
+        { icon: "clock", label: "Evening & Weekend Hours" },
+        { icon: "creditCard", label: "0% Financing Available" },
+        { icon: "shield", label: "No-Judgment Dentistry" },
+      ],
+    },
+    testimonials: [
+      { name: "Jennifer Walsh", role: "Marketing Director", text: "I avoided the dentist for 6 years. Dr. Park changed everything. She was patient, gentle, and never made me feel ashamed. Now I look forward to my cleanings.", rating: 5, image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200" },
+      { name: "Robert Chen", role: "Engineer", text: "Got my Invisalign here. Results are incredible. Transparent costs from day one — no surprise bills. My smile is straight for the first time.", rating: 5, image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=200" },
+      { name: "Amanda Torres", role: "Teacher", text: "My kids used to scream at the dentist. Now they ask when they can go back. Dr. Martinez is a miracle worker with children.", rating: 5, image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200" },
+    ],
+    faq: [
+      { q: "Do you accept insurance?", a: "In-network with Delta Dental, Cigna, MetLife, Aetna. 0% financing through CareCredit for uncovered treatments." },
+      { q: "I'm terrified of the dentist — help?", a: "30% of our patients felt the same way. We offer sedation, noise-canceling headphones, and a no-pressure approach. YOUR pace." },
+      { q: "Cost without insurance?", a: "New patient special: $79 (cleaning + exam + X-rays). Regular cleanings: $120. Always a cost estimate before treatment." },
+    ],
+    ownerName: "Dr. Lisa Park, DDS",
+    ownerTitle: "Lead Dentist & Founder",
+    ownerImage: "https://images.pexels.com/photos/5214958/pexels-photo-5214958.jpeg?auto=compress&cs=tinysrgb&w=400",
+    hours: "Mon-Fri 8AM-7PM, Sat 9AM-3PM",
+  },
+];
+
+export function getDemoBySlug(slug: string): DemoData | undefined {
+  return demos.find((d) => d.slug === slug);
+}
+
+export function getAllSlugs(): string[] {
+  return demos.map((d) => d.slug);
+}
