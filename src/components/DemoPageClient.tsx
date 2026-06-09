@@ -3,6 +3,8 @@
 import { useLanguage } from '@/i18n/LanguageContext';
 import { demoTranslations, DemoTranslations } from '@/i18n/demoTranslations';
 import DemoNavbar from '@/components/DemoNavbar';
+import DemoPromoBanner from '@/components/DemoPromoBanner';
+import DemoFloatingCTA from '@/components/DemoFloatingCTA';
 import DemoHero from '@/components/DemoHero';
 import DemoServices from '@/components/DemoServices';
 import DemoTestimonials from '@/components/DemoTestimonials';
@@ -43,7 +45,8 @@ export default function DemoPageClient({ demo }: DemoPageClientProps) {
   if (!demoTrans) {
     // Fallback: use demo data as-is if no translations
     return (
-      <div className="min-h-screen bg-dark-900">
+      <div className="min-h-screen bg-dark-900 pt-[52px]">
+        <DemoPromoBanner />
         <DemoNavbar
           businessName={demo.businessName}
           phone={demo.phone}
@@ -86,6 +89,7 @@ export default function DemoPageClient({ demo }: DemoPageClientProps) {
           state={demo.state}
           accent={demo.accent}
         />
+        <DemoFloatingCTA />
       </div>
     );
   }
@@ -107,7 +111,8 @@ export default function DemoPageClient({ demo }: DemoPageClientProps) {
   }));
 
   return (
-    <div className="min-h-screen bg-dark-900">
+    <div className="min-h-screen bg-dark-900 pt-[52px]">
+      <DemoPromoBanner />
       <DemoNavbar
         businessName={demo.businessName}
         phone={demo.phone}
@@ -153,6 +158,7 @@ export default function DemoPageClient({ demo }: DemoPageClientProps) {
         state={demo.state}
         accent={demo.accent}
       />
+      <DemoFloatingCTA />
     </div>
   );
 }
