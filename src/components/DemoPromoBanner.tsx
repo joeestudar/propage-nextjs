@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const promoTexts = {
   en: {
@@ -28,16 +29,11 @@ const promoTexts = {
 
 export default function DemoPromoBanner() {
   const [visible, setVisible] = useState(true);
-  const [language, setLanguage] = useState<'en' | 'es' | 'pt'>('en');
-
-  useEffect(() => {
-    const stored = localStorage.getItem('language') as 'en' | 'es' | 'pt' | null;
-    if (stored && promoTexts[stored]) setLanguage(stored);
-  }, []);
+  const { language } = useLanguage();
 
   if (!visible) return null;
 
-  const t = promoTexts[language];
+  const t = promoTexts[language] || promoTexts.en;
 
   return (
     <div className="sticky top-16 z-[9999] animate-slideDown">
