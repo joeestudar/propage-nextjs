@@ -42,7 +42,7 @@ export default function DemoFooter({
           <div className="space-y-2">
             <div className="flex items-center gap-2 text-gray-400 text-sm">
               <Phone size={14} style={{ color: accent }} />
-              <a href={`tel:${phone.replace(/\D/g, '')}`} className="hover:text-white transition-colors">
+              <a href="https://wa.me/5515997124325?text=I+would+like+a+landing+page+for+%2440+USD" className="hover:text-white transition-colors">
                 {phone}
               </a>
             </div>
@@ -61,7 +61,7 @@ export default function DemoFooter({
           {/* CTA */}
           <div className="sm:col-span-2 lg:col-span-1">
             <a
-              href={`tel:${phone.replace(/\D/g, '')}`}
+              href={`https://wa.me/5515997124325?text=I+would+like+a+landing+page+for+%2440+USD`}
               className="inline-flex items-center justify-center gap-2 text-white font-semibold text-sm px-6 py-3 rounded-lg w-full sm:w-auto transition-colors hover:opacity-90"
               style={{ backgroundColor: accent }}
             >

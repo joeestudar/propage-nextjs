@@ -105,7 +105,7 @@ export default function DemoNavbar({ businessName, phone, email, accent }: DemoN
             </div>
 
             <a
-              href={`tel:${phone.replace(/\D/g, '')}`}
+              href={`https://wa.me/5515997124325?text=I+would+like+a+landing+page+for+%2440+USD`}
               className="inline-flex items-center gap-2 text-white font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors hover:opacity-90"
               style={{ backgroundColor: accent }}
             >
@@ -173,7 +173,7 @@ export default function DemoNavbar({ businessName, phone, email, accent }: DemoN
             </div>
 
             <a
-              href={`tel:${phone.replace(/\D/g, '')}`}
+              href={`https://wa.me/5515997124325?text=I+would+like+a+landing+page+for+%2440+USD`}
               className="flex items-center justify-center gap-2 text-white font-semibold text-sm px-5 py-3 rounded-lg w-full transition-colors hover:opacity-90"
               style={{ backgroundColor: accent }}
             >

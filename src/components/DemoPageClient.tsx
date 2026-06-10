@@ -70,7 +70,7 @@ export default function DemoPageClient({ demo }: DemoPageClientProps) {
           accentRgb={demo.accentRgb}
           stats={demo.stats}
           ctaText={t.demoNavbar.callNow}
-          ctaLink={`tel:${demo.phone}`}
+          ctaLink={`https://wa.me/5515997124325?text=I+would+like+a+landing+page+for+%2440+USD`}
         />
         <DemoServices
           services={demo.services}
@@ -151,7 +151,7 @@ export default function DemoPageClient({ demo }: DemoPageClientProps) {
         accentRgb={demo.accentRgb}
         stats={demoTrans.stats}
         ctaText={t.demoNavbar.callNow}
-        ctaLink={`tel:${demo.phone}`}
+        ctaLink={`https://wa.me/5515997124325?text=I+would+like+a+landing+page+for+%2440+USD`}
       />
       <DemoServices
         services={translatedServices}

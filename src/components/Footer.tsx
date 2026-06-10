@@ -1,6 +1,7 @@
 'use client';
 
 import { Globe, Mail, Phone, MapPin } from 'lucide-react';
+import Image from 'next/image';
 import { useLanguage } from '@/i18n/LanguageContext';
 
 export default function Footer() {
@@ -11,9 +12,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <div className="text-xl font-bold text-white mb-4">
-              <span className="text-white">PRO</span>
-              <span className="text-white/60">PAGE</span>
+            <div className="mb-4">
+              <Image src="/logo.png" alt="ProPage Design" width={160} height={45} className="h-10 w-auto" />
             </div>
             <p className="text-white/40 text-sm">{t.footer.description}</p>
           </div>

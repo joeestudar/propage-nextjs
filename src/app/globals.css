@@ -10,9 +10,9 @@
   --color-dark-300: #888888;
   --color-dark-200: #aaaaaa;
   --color-dark-100: #cccccc;
-  --color-accent: #e85d04;
-  --color-accent-light: #ff7b2e;
-  --color-accent-dark: #c44d03;
+  --color-accent: #8b5cf6;
+  --color-accent-light: #a78bfa;
+  --color-accent-dark: #7c3aed;
 }
 
 html {
@@ -42,8 +42,8 @@ body {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(232, 93, 4, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(232, 93, 4, 0.6); }
+  0%, 100% { box-shadow: 0 0 20px rgba(139, 92, 246, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.6); }
 }
 
 .animate-fade-up {
