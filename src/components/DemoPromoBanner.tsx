@@ -40,7 +40,7 @@ export default function DemoPromoBanner() {
   const t = promoTexts[language];
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-[9999] animate-slideDown">
+    <div className="sticky top-16 z-[9999] animate-slideDown">
       {/* Gradient animated background */}
       <div className="relative overflow-hidden bg-gradient-to-r from-orange-600 via-red-500 to-orange-600 animate-gradientShift">
         {/* Animated shimmer overlay */}

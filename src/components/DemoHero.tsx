@@ -41,7 +41,7 @@ export default function DemoHero({
   const bgImage = heroImage || image || '';
 
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image

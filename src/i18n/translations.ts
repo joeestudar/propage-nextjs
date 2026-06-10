@@ -2,6 +2,10 @@ export type Language = 'en' | 'es' | 'pt';
 
 export interface DemoNavbar {
   callNow: string;
+  services: string;
+  about: string;
+  reviews: string;
+  contact: string;
 }
 
 export interface DemoServices {
@@ -10,6 +14,11 @@ export interface DemoServices {
 }
 
 export interface DemoTestimonials {
+  title: string;
+  subtitle: string;
+}
+
+export interface DemoFAQ {
   title: string;
   subtitle: string;
 }
@@ -159,6 +168,7 @@ export interface Translations {
   demoNavbar: DemoNavbar;
   demoServices: DemoServices;
   demoTestimonials: DemoTestimonials;
+  demoFAQ: DemoFAQ;
   demoContact: DemoContact;
   demoFooter: DemoFooter;
   navbar: Navbar;
@@ -178,6 +188,10 @@ export const translations: Record<Language, Translations> = {
   en: {
     demoNavbar: {
       callNow: 'Call Now',
+      services: 'Services',
+      about: 'About',
+      reviews: 'Reviews',
+      contact: 'Contact',
     },
     demoServices: {
       title: 'Our Services',
@@ -186,6 +200,10 @@ export const translations: Record<Language, Translations> = {
     demoTestimonials: {
       title: 'What Our Clients Say',
       subtitle: "Don't just take our word for it.",
+    },
+    demoFAQ: {
+      title: 'Frequently Asked Questions',
+      subtitle: "Got questions? We've got answers.",
     },
     demoContact: {
       title: 'Contact Us',
@@ -341,6 +359,10 @@ export const translations: Record<Language, Translations> = {
   es: {
     demoNavbar: {
       callNow: 'Llamar Ahora',
+      services: 'Servicios',
+      about: 'Acerca de',
+      reviews: 'Reseñas',
+      contact: 'Contacto',
     },
     demoServices: {
       title: 'Nuestros Servicios',
@@ -349,6 +371,10 @@ export const translations: Record<Language, Translations> = {
     demoTestimonials: {
       title: 'Lo Que Dicen Nuestros Clientes',
       subtitle: 'No solo confíes en nuestra palabra.',
+    },
+    demoFAQ: {
+      title: 'Preguntas Frecuentes',
+      subtitle: '¿Tienes preguntas? Tenemos respuestas.',
     },
     demoContact: {
       title: 'Contáctanos',
@@ -504,6 +530,10 @@ export const translations: Record<Language, Translations> = {
   pt: {
     demoNavbar: {
       callNow: 'Ligar Agora',
+      services: 'Serviços',
+      about: 'Sobre',
+      reviews: 'Avaliações',
+      contact: 'Contato',
     },
     demoServices: {
       title: 'Nossos Serviços',
@@ -512,6 +542,10 @@ export const translations: Record<Language, Translations> = {
     demoTestimonials: {
       title: 'O Que Nossos Clientes Dizem',
       subtitle: 'Não confie apenas na nossa palavra.',
+    },
+    demoFAQ: {
+      title: 'Perguntas Frequentes',
+      subtitle: 'Tem perguntas? Temos respostas.',
     },
     demoContact: {
       title: 'Entre em Contato',

@@ -7,7 +7,9 @@ import DemoPromoBanner from '@/components/DemoPromoBanner';
 import DemoFloatingCTA from '@/components/DemoFloatingCTA';
 import DemoHero from '@/components/DemoHero';
 import DemoServices from '@/components/DemoServices';
+import DemoAbout from '@/components/DemoAbout';
 import DemoTestimonials from '@/components/DemoTestimonials';
+import DemoFAQ from '@/components/DemoFAQ';
 import DemoContact from '@/components/DemoContact';
 import DemoFooter from '@/components/DemoFooter';
 import { Language } from '@/i18n/translations';
@@ -30,6 +32,13 @@ interface Demo {
   stats: { value: string; label: string }[];
   services: { title: string; desc: string; price?: string; icon: string; image: string }[];
   testimonials: { name: string; role: string; text: string; rating: number; image: string }[];
+  aboutTitle?: string;
+  aboutText?: string;
+  aboutFeatures?: { label: string }[];
+  ownerName?: string;
+  ownerRole?: string;
+  ownerImage?: string;
+  faq?: { q: string; a: string }[];
 }
 
 interface DemoPageClientProps {
@@ -45,11 +54,12 @@ export default function DemoPageClient({ demo }: DemoPageClientProps) {
   if (!demoTrans) {
     // Fallback: use demo data as-is if no translations
     return (
-      <div className="min-h-screen bg-dark-900 pt-[52px]">
+      <div className="min-h-screen bg-dark-900 pt-16">
         <DemoPromoBanner />
         <DemoNavbar
           businessName={demo.businessName}
           phone={demo.phone}
+          email={demo.email}
           accent={demo.accent}
         />
         <DemoHero
@@ -66,10 +76,22 @@ export default function DemoPageClient({ demo }: DemoPageClientProps) {
           services={demo.services}
           accent={demo.accent}
         />
+        {demo.aboutTitle && (
+          <DemoAbout
+            title={demo.aboutTitle}
+            text={demo.aboutText || ''}
+            features={demo.aboutFeatures || []}
+            ownerName={demo.ownerName}
+            ownerRole={demo.ownerRole}
+            ownerImage={demo.ownerImage}
+            accent={demo.accent}
+          />
+        )}
         <DemoTestimonials
           testimonials={demo.testimonials}
           accent={demo.accent}
         />
+        <DemoFAQ faq={demo.faq || []} accent={demo.accent} />
         <DemoContact
           phone={demo.phone}
           email={demo.email}
@@ -111,7 +133,7 @@ export default function DemoPageClient({ demo }: DemoPageClientProps) {
   }));
 
   return (
-    <div className="min-h-screen bg-dark-900 pt-[52px]">
+    <div className="min-h-screen bg-dark-900 pt-16">
       <DemoPromoBanner />
       <DemoNavbar
         businessName={demo.businessName}
@@ -135,10 +157,20 @@ export default function DemoPageClient({ demo }: DemoPageClientProps) {
         services={translatedServices}
         accent={demo.accent}
       />
+      <DemoAbout
+        title={demoTrans.aboutTitle}
+        text={demoTrans.aboutText}
+        features={demoTrans.aboutFeatures}
+        ownerName={demo.ownerName}
+        ownerRole={demo.ownerRole}
+        ownerImage={demo.ownerImage}
+        accent={demo.accent}
+      />
       <DemoTestimonials
         testimonials={translatedTestimonials}
         accent={demo.accent}
       />
+      <DemoFAQ faq={demoTrans.faq} accent={demo.accent} />
       <DemoContact
         phone={demo.phone}
         email={demo.email}

@@ -37,13 +37,29 @@ export default function DemoNavbar({ businessName, phone, email, accent }: DemoN
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-dark-900/95 backdrop-blur-md border-b border-dark-700">
+    <nav className="fixed top-0 left-0 right-0 z-[10000] bg-dark-900/95 backdrop-blur-md border-b border-dark-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="text-lg sm:text-xl font-bold text-white truncate max-w-[50%]">
+          <a href="https://propages.shalomsites.com.br" className="text-lg sm:text-xl font-bold text-white truncate max-w-[50%] hover:opacity-80 transition-opacity">
             {businessName}
           </a>
+
+          {/* Desktop Nav */}
+          <div className="hidden md:flex items-center gap-6">
+            <a href="#services" className="text-gray-400 hover:text-white text-sm transition-colors">
+              {t.demoNavbar.services}
+            </a>
+            <a href="#about" className="text-gray-400 hover:text-white text-sm transition-colors">
+              {t.demoNavbar.about}
+            </a>
+            <a href="#reviews" className="text-gray-400 hover:text-white text-sm transition-colors">
+              {t.demoNavbar.reviews}
+            </a>
+            <a href="#contact" className="text-gray-400 hover:text-white text-sm transition-colors">
+              {t.demoNavbar.contact}
+            </a>
+          </div>
 
           {/* Desktop CTA */}
           <div className="hidden sm:flex items-center gap-4">
@@ -90,7 +106,7 @@ export default function DemoNavbar({ businessName, phone, email, accent }: DemoN
 
             <a
               href={`tel:${phone.replace(/\D/g, '')}`}
-              className="inline-flex items-center gap-2 text-white font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors"
+              className="inline-flex items-center gap-2 text-white font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors hover:opacity-90"
               style={{ backgroundColor: accent }}
             >
               <Phone size={16} />
@@ -113,6 +129,19 @@ export default function DemoNavbar({ businessName, phone, email, accent }: DemoN
       {mobileOpen && (
         <div className="sm:hidden bg-dark-800 border-t border-dark-700">
           <div className="px-4 py-4 space-y-3">
+            <a href="#services" onClick={() => setMobileOpen(false)} className="block text-gray-300 hover:text-white text-sm transition-colors">
+              {t.demoNavbar.services}
+            </a>
+            <a href="#about" onClick={() => setMobileOpen(false)} className="block text-gray-300 hover:text-white text-sm transition-colors">
+              {t.demoNavbar.about}
+            </a>
+            <a href="#reviews" onClick={() => setMobileOpen(false)} className="block text-gray-300 hover:text-white text-sm transition-colors">
+              {t.demoNavbar.reviews}
+            </a>
+            <a href="#contact" onClick={() => setMobileOpen(false)} className="block text-gray-300 hover:text-white text-sm transition-colors">
+              {t.demoNavbar.contact}
+            </a>
+
             {email && (
               <a
                 href={`mailto:${email}`}
@@ -145,7 +174,7 @@ export default function DemoNavbar({ businessName, phone, email, accent }: DemoN
 
             <a
               href={`tel:${phone.replace(/\D/g, '')}`}
-              className="flex items-center justify-center gap-2 text-white font-semibold text-sm px-5 py-3 rounded-lg w-full transition-colors"
+              className="flex items-center justify-center gap-2 text-white font-semibold text-sm px-5 py-3 rounded-lg w-full transition-colors hover:opacity-90"
               style={{ backgroundColor: accent }}
             >
               <Phone size={16} />
