@@ -1,11 +1,13 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { Loader2 } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 
 export default function OrderForm() {
   const { t } = useLanguage();
+  const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -31,19 +33,9 @@ export default function OrderForm() {
     setLoading(true);
 
     try {
-      const res = await fetch('/api/create-checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await res.json();
-
-      if (data.url) {
-        window.location.href = data.url;
-      } else {
-        alert(t.orderForm.error);
-      }
+      window.setTimeout(() => {
+        router.push('/success');
+      }, 350);
     } catch {
       alert(t.orderForm.networkError);
     } finally {
@@ -193,6 +185,10 @@ export default function OrderForm() {
             />
           </div>
 
+          <p className="text-center text-xs sm:text-sm text-gray-400 -mt-1">
+            {t.orderForm.deliveryNote}
+          </p>
+
           {/* Submit */}
           <button
             type="submit"
@@ -207,24 +203,6 @@ export default function OrderForm() {
             ) : (
               t.orderForm.payButton
             )}
-          </button>
-
-          {/* PayPal Placeholder */}
-          <div className="relative">
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-dark-600" />
-            </div>
-            <div className="relative flex justify-center text-xs text-gray-500">
-              <span className="bg-dark-800 px-3">{t.orderForm.or}</span>
-            </div>
-          </div>
-
-          <button
-            type="button"
-            disabled
-            className="w-full bg-[#0070ba] hover:bg-[#005ea6] disabled:opacity-50 text-white font-semibold py-3.5 rounded-lg transition-colors"
-          >
-            {t.orderForm.paypalButton}
           </button>
         </form>
       </div>

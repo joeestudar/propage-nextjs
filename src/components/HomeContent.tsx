@@ -11,14 +11,34 @@ import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { demos } from '@/data/demos';
 
-const galleryItems = [
-  { name: 'Apex Athletic Training', industry: 'Coaching', image: 'https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=600', href: '/demos/coach' },
-  { name: 'Meridian Dental', industry: 'Dental', image: 'https://images.pexels.com/photos/3845766/pexels-photo-3845766.jpeg?auto=compress&cs=tinysrgb&w=600', href: '/demos/dentist' },
-  { name: 'Justice Legal Group', industry: 'Legal', image: 'https://images.pexels.com/photos/8927462/pexels-photo-8927462.jpeg?auto=compress&cs=tinysrgb&w=600', href: '/demos/lawyer' },
-  { name: 'Bright Wire Electric', industry: 'Electrician', image: 'https://images.pexels.com/photos/8961101/pexels-photo-8961101.jpeg?auto=compress&cs=tinysrgb&w=600', href: '/demos/electrician' },
-  { name: 'Canyon Plumbing', industry: 'Plumber', image: 'https://images.pexels.com/photos/5691602/pexels-photo-5691602.jpeg?auto=compress&cs=tinysrgb&w=600', href: '/demos/plumber' },
-];
+const gallerySlugs = [
+  'coach',
+  'dentist',
+  'lawyer',
+  'electrician',
+  'plumber',
+  'ar-condicionado',
+  'pedreiro',
+  'chaveiro',
+  'eletricista',
+  'caminhoneiro',
+] as const;
+
+const galleryItems = gallerySlugs
+  .map((slug) => {
+    const demo = demos.find((item) => item.slug === slug);
+    if (!demo) return null;
+
+    return {
+      name: demo.businessName,
+      industry: demo.industry,
+      image: demo.heroImage,
+      href: `/demos/${demo.slug}`,
+    };
+  })
+  .filter((item): item is { name: string; industry: string; image: string; href: string } => Boolean(item));
 
 export default function HomeContent() {
   const { t } = useLanguage();
@@ -34,7 +54,7 @@ export default function HomeContent() {
     { q: 'How long does it take?', a: 'Most pages are delivered within 48 hours. Complex customizations may take up to 72 hours.' },
     { q: 'Can I make changes after?', a: 'Yes! Your first revision is free. Additional revisions are $10 each.' },
     { q: 'Do I need a domain?', a: 'No! We host your page on a professional subdomain. If you have your own domain, we can point it there for free.' },
-    { q: 'What payment methods do you accept?', a: 'Credit/debit cards via Stripe and PayPal. All payments are secure and encrypted.' },
+    { q: 'How do I pay?', a: 'Payment is made on delivery only. No cards, no PayPal, no upfront charge.' },
     { q: 'Is there a monthly fee?', a: 'No! $40 is a one-time payment. Your page stays live forever.' },
   ];
 

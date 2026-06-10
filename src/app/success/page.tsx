@@ -19,12 +19,12 @@ export default function SuccessPage() {
         </div>
 
         <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4 animate-fade-up delay-100">
-          Payment Successful!
+          Order Received!
         </h1>
 
         <p className="text-dark-200 text-lg mb-10 animate-fade-up delay-200">
           Thank you for your order. We&apos;ll start building your landing page within
-          24 hours.
+          24 hours. Payment on delivery.
         </p>
 
         {/* Next steps */}
@@ -46,8 +46,8 @@ export default function SuccessPage() {
               },
               {
                 step: "3",
-                title: "You review and approve",
-                desc: "We'll send you a preview link. Request any changes until you're 100% happy.",
+                title: "You review and pay on delivery",
+                desc: "We'll send you a preview link. Request any changes until you're 100% happy, then pay when everything is delivered.",
               },
             ].map((item) => (
               <div key={item.step} className="flex gap-4">
