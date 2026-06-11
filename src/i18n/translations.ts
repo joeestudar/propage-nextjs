@@ -164,6 +164,7 @@ export interface Success {
 }
 
 export interface Translations {
+  whatsappMessage: string;
   demoNavbar: DemoNavbar;
   demoServices: DemoServices;
   demoTestimonials: DemoTestimonials;
@@ -185,6 +186,7 @@ export interface Translations {
 
 export const translations: Record<Language, Translations> = {
   en: {
+    whatsappMessage: 'Hello, I would like to create my landing page for $40 USD.',
     demoNavbar: {
       callNow: 'Call Now',
       services: 'Services',
@@ -355,6 +357,7 @@ export const translations: Record<Language, Translations> = {
   },
 
   es: {
+    whatsappMessage: 'Hola, me gustaría crear mi landing page por $40 USD.',
     demoNavbar: {
       callNow: 'Llamar Ahora',
       services: 'Servicios',
@@ -525,6 +528,7 @@ export const translations: Record<Language, Translations> = {
   },
 
   pt: {
+    whatsappMessage: 'Olá, gostaria de criar minha landing page por $40 USD.',
     demoNavbar: {
       callNow: 'Ligar Agora',
       services: 'Serviços',

@@ -1,10 +1,11 @@
 'use client';
 
+import { useLanguage } from '@/i18n/LanguageContext';
+
 export default function WhatsAppButton() {
+  const { t } = useLanguage();
   const phone = '5515997124325';
-  const message = encodeURIComponent(
-    'Olá, gostaria de criar minha pagina de 40 usd.'
-  );
+  const message = encodeURIComponent(t.whatsappMessage);
   const href = `https://wa.me/${phone}?text=${message}`;
 
   return (
