@@ -88,7 +88,7 @@ export default function DemoHero({
             </a>
           ) : phone ? (
             <a
-              href={`https://wa.me/5515997124325?text=I+would+like+a+landing+page+for+%2440+USD`}
+              href={`https://wa.me/5515997124325?text=Ol%C3%A1%2C%20gostaria%20de%20criar%20minha%20pagina%20de%2040%20usd.`}
               className="inline-flex items-center gap-2 text-white font-semibold px-8 py-3.5 rounded-lg text-lg transition-colors hover:opacity-90"
               style={{ backgroundColor: accent }}
             >
